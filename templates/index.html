@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+{% for song in songs %}
+    <div class="btn btn-success">
+        name: {{ song.name }}
+        <br>
+        artist: {{ song.artist.name }}
+    </div>
+{% endfor %}
+
+</body>
+</html>
