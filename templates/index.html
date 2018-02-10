@@ -1,8 +1,13 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src={% static "main.js" %}></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,6 +19,20 @@
         artist: {{ song.artist.name }}
     </div>
 {% endfor %}
+
+
+<br>
+<br>
+
+{% verbatim %}
+<div id="song">
+    <div class="btn btn-success" v-for="item in items">
+        name: {{ item.name }}
+        <br>
+        artist: {{ item.artist_name }}
+    </div>
+</div>
+{% endverbatim %}
 
 </body>
 </html>

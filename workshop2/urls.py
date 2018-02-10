@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from audiolibary.views import get_songs
+from audiolibary.views import get_songs, SongViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_songs)
+    path('', get_songs),
+    path('songs', SongViewSet.as_view({'get': 'list'}))
 ]
