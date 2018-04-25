@@ -13,5 +13,8 @@ def get_songs(request):
 
 
 class SongViewSet(ModelViewSet):
+    """
+    very good view set
+    """
     queryset = Song.objects.all()
     serializer_class = SongSerializer
